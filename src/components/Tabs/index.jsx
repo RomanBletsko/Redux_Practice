@@ -5,7 +5,7 @@ import "./styles.css";
 
 const Tabs = () => {
   const context = useContext(ThemeContext);
-  console.log("context = ", context);
+  // console.log("context = ", context);
   const tabs = ["users", "posts", "login"];
   return (
     <div
