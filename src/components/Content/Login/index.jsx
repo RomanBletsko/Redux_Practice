@@ -30,9 +30,7 @@ const Login = () => {
       
       <h2>Token is:</h2>
       <hr />
-      <Span>
-        {context.token || "Not assigned"}
-        </Span>
+      <span>{context.token || "Not assigned"}</span>
       <hr />
       {context.token ? (
         <button onClick={() => context.logOut()}>Logout</button>
@@ -48,11 +46,7 @@ const Login = () => {
 const MasedgeStyled = styled.p({
   color: "grean",
 })
-const Span = styled.span({
-  display: "block",
-  width: "60px",
-  padding: "0 10px",
-})
+
 
 
 export default Login;
