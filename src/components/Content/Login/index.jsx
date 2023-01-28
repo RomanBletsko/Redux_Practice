@@ -43,8 +43,8 @@ const Login = () => {
   );
 };
 
-const MasedgeStyled = styled.p({
-  color: "grean",
+const MasedgeStyled = styled.h3({
+  color: "green",
 })
 
 
