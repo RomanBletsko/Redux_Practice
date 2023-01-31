@@ -10,9 +10,7 @@ const Post = ({name, year, color}) =>{
 }
 const Wraper = styled.div`
 height: 100px;
-background: ${(props) => {
-   return props.color
-}};
+background: ${(props) =>  props.color };
 width: 80%;
 margin: 10px;
 border-radius: 10px;

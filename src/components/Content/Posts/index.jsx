@@ -11,7 +11,6 @@ import Post from "./Post";
 
 const Posts = () => {
   const { posts,status,page,totalPages,loader } = useSelector((store) => store.posts);
-  // const [pageNumber,setPageNumber] = useState(1)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,25 +19,6 @@ const Posts = () => {
     }
   }, [status, dispatch]);
 
-  // const handleFunc = (target)=>{
-  //   const actionType = target.type || target.parentNode.type
-  //   const action = target.ariaLabel || target.parentNode.ariaLabel
-  //   const {outerText}=target
-  //   if(actionType === "button"){
-  //     if( +outerText !== pageNumber &&  outerText ){  
-  //       setPageNumber( +outerText)
-  //       dispatch(fetchPosts({page:+outerText}))
-  //     }else if( action === "Go to next page" || action === "Go to previous page"){
-  //       if(action === 'Go to next page'){
-  //         setPageNumber( pageNumber + 1)
-  //         dispatch(fetchPosts({page:pageNumber + 1}))
-  //       }else{
-  //         setPageNumber( pageNumber - 1)
-  //         dispatch(fetchPosts({page:pageNumber - 1}))
-  //       }
-  //     }
-  //   }
-  // }
 
 const handleFunc = (obj, page)=>{
   dispatch(fetchPosts({page:page}))
@@ -64,9 +44,6 @@ const handleFunc = (obj, page)=>{
       variant="outlined" 
       shape="rounded" 
       onChange={handleFunc}
-      // onClick={(event)=>{
-      //   handleFunc(event.target) 
-      // }}
       />
     </Stack>
   </PaginationHolder>

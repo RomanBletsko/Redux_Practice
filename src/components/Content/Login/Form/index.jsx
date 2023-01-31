@@ -18,12 +18,12 @@ const FormComponent = ()=>{
   const handleLogin = (values)=>{
     setLoginError(false)
       dispatch(fetchLogin({...values}))
-      .then((responce) => context.saveAccessToken(responce.payload.token))
+      .then((response) => context.saveAccessToken(response.payload.token))
       .catch(() => {setLoginError(true)});
     }
     
     return(<WraperStyled>
-      {loader ? (<Loader />):(
+      { loader ? <Loader /> :(
         <>
         <h3>{loginError ? "Wrong login or password!": null}</h3>
         <Formik
@@ -70,7 +70,6 @@ const FormComponent = ()=>{
     </WraperStyled>)
 }
 const WraperStyled = styled.div({
-  // width: "80%",
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
